@@ -1,15 +1,15 @@
-@extends('../layouts/app')
+{{--@extends('../layouts/app')--}}
 
-@section('content')
-
-
-    <h1>Show Company</h1>
+{{--@section('content')--}}
 
 
+    <h1>Company Index</h1>
+
+<ul>
   @foreach($companies as $company)
-    <p> {{ $company->name }}</p>
+    <li> {{ $company->name }}</li>
 
     @endforeach
+</ul>
 
-
-    @endsection
+    {{--@endsection--}}

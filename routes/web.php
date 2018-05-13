@@ -12,10 +12,30 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    $hello = 'Hello World';
+
+    return view('welcome', compact('hello'));
 });
+
+Route::get('/companies/', function () {
+
+    $companies = DB::table('companies')->get();
+
+    return view('company.index', compact('companies'));
+});
+//
+//Route::get('/companies/{company}', function ($id) {
+//
+//    $company = DB::table('companies')->find($id);
+//
+//    dd($company);
+//
+//    return view('company.show', compact('company'));
+//});
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resources(['company'=>  'CompanyController']);
+Route::resources(['employee'=> 'EmployeeController']);

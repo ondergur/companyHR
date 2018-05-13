@@ -1,10 +1,10 @@
-@extends('../layouts/app')
+{{--@extends('../layouts/app')--}}
 
-@section('content')
+{{--@section('content')--}}
 
 
     <h1>Show Company</h1>
 
     <h3> {{ $company->name }}</h3>
 
-    @endsection
+    {{--@endsection--}}
