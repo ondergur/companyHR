@@ -18,12 +18,7 @@ Route::get('/', function () {
     return view('welcome', compact('hello'));
 });
 
-Route::get('/companies/', function () {
-
-    $companies = DB::table('companies')->get();
-
-    return view('company.index', compact('companies'));
-});
+Route::get('/companies/', 'CompanyController@index');
 //
 //Route::get('/companies/{company}', function ($id) {
 //

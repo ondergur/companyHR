@@ -1,7 +1,9 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: onder
- * Date: 5/14/18
- * Time: 11:34 AM
- */
+
+<h1>Employee Index</h1>
+
+<ul>
+    @foreach($employees as $employee)
+        <li> {{ $employee->firstName }} {{$employee->lastName}}</li>
+
+    @endforeach
+</ul>
