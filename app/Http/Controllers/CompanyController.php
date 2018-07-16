@@ -27,7 +27,7 @@ class CompanyController extends Controller
      */
     public function create()
     {
-        //
+        return view('company.create');
     }
 
     /**
@@ -38,7 +38,16 @@ class CompanyController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $company = new Company;
+        $company->name = $request->name;
+        $company->email = $request->email;
+        $company->phone = $request->phone;
+        $company->website = $request->website;
+        $company->address = $request->address;
+
+        $company->save();
+
+        return redirect('/companies/');
     }
 
     /**
